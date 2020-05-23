@@ -1,0 +1,34 @@
+#####################################
+# Site / Theme Configuration
+#####################################
+# Menu
+menu:
+  Home: /
+  Archives: archives
+  Categories: categories
+  Tags: tags
+  Course: https://sva.thinkific.com
+  About: about
+rss: /atom.xml
+
+# Default Keywords
+keywords: blog, static, void, academy, program, programming, programmer, code, coding, coder, software, software engineer, develop, development, developer, python, javascript
+
+# Put favicon.ico into theme source directory
+favicon: favicon.ico
+
+# {Font-Awesome-Icon}: {URL}
+social:
+  Graduation-Cap: https://sva.thinkific.com
+  GitHub: https://github.com/Static-Void-Academy
+  Youtube: https://www.youtube.com/channel/UCD9Vpco6dO5GfYOSmipwlvg
+  Twitter: https://twitter.com/SV_Academy
+  Medium: https://medium.com/static-void-academy
+
+# Only support Disqus currently
+disqus_shortname: static-void-academy
+
+# Google Stuff
+google_site_verification:
+google_analytics: UA-159047384-1
+
