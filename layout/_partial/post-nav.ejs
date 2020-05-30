@@ -1,0 +1,41 @@
+<% if (page.prev || page.next){ %>
+  <% if (is_home()) { %>
+    <% page = page.posts.first() %>
+  <% } %>
+  <section>
+  <hr>
+  <nav class="level">
+    <div class="level-left">
+      <% if (page.next) { %>
+      <div class="level-item">
+        <a href="<%- url_for(page.next.path) %>">
+          <strong><%= __('prev') %></strong>
+          <div>
+            <%= page.next.title %>
+            <div>
+              <%= date(page.next.date, 'MMMM D, YYYY') %>
+            </div>
+          </div>
+        </a>
+      </div>
+      <% } %>
+    </div>
+    <div class="level-right">
+      <% if (page.prev) { %>
+      <div class="level-item has-text-right">
+        <a href="<%- url_for(page.prev.path) %>">
+          <strong><%= __('next') %></strong>
+          <div>
+            <%= page.prev.title %>
+            <div>
+              <%= date(page.prev.date, 'MMMM D, YYYY') %>
+            </div>
+          </div>
+        </a>
+      </div>
+      <% } %>
+    </div>
+  </nav>
+  </section>
+<% } %>
+

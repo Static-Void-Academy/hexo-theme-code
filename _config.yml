@@ -7,7 +7,6 @@ menu:
   Archives: archives
   Categories: categories
   Tags: tags
-  Course: https://sva.thinkific.com
   About: about
 rss: /atom.xml
 
@@ -19,11 +18,21 @@ favicon: favicon.ico
 
 # {Font-Awesome-Icon}: {URL}
 social:
-  Graduation-Cap: https://sva.thinkific.com
-  GitHub: https://github.com/Static-Void-Academy
-  Youtube: https://www.youtube.com/channel/UCD9Vpco6dO5GfYOSmipwlvg
-  Twitter: https://twitter.com/SV_Academy
-  Medium: https://medium.com/static-void-academy
+  Graduation-Cap:
+    url: https://sva.thinkific.com
+    prefix: fas
+  GitHub:
+    url: https://github.com/Static-Void-Academy
+    prefix: fab
+  Youtube:
+    url: https://www.youtube.com/channel/UCD9Vpco6dO5GfYOSmipwlvg
+    prefix: fab
+  Twitter:
+    url: https://twitter.com/SV_Academy
+    prefix: fab
+  Medium:
+    url: https://medium.com/static-void-academy
+    prefix: fab
 
 # Only support Disqus currently
 disqus_shortname: static-void-academy

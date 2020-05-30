@@ -1,0 +1,30 @@
+<nav id="navbar-override" class="navbar is-spaced" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="<%- url_for('/') %>">
+    </a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItems">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarItems" class="navbar-menu is-size-5">
+    <div class="navbar-start">
+    	<% Object.keys(theme.menu).forEach(function(key) { %>
+      <a class="navbar-item" href="<%- url_for(theme.menu[key]) %>"><%= key %></a>
+      <% }); %>
+    </div>
+    <div class="navbar-end">
+    	<% Object.keys(theme.social).forEach(function(key) { %>
+      <a class="navbar-item" href="<%- theme.social[key]['url'] %>">
+        <% var iconName = key.toLowerCase() %>
+        <%- fa_inline(iconName, {prefix: theme.social[key]['prefix']}) %>
+      </a>
+      <% }); %>
+      <a class="navbar-item" href="<%- theme.rss %>">
+        <%- fa_inline('rss', {prefix: 'fas'}) %>
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,29 @@
+<div class="hero is-small">
+<div class="hero-body">
+<article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="/img/logo-square.svg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="container">
+      <p class="title">
+      <% if (theme.title){ %>
+      <%- theme.title %>
+      <% } else { %>
+      <%- config.title %>
+      <% } %>
+      </p>
+      <p class="subtitle">
+      <% if (theme.subtitle){ %>
+      <%- theme.subtitle %>
+      <% } else { %>
+      <%- config.subtitle %>
+      <% } %>
+      </p>
+    </div>
+  </div>
+</article>
+</div>
+</div>

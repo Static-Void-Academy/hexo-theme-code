@@ -2,7 +2,18 @@
 <!-- Head -->
 <%- partial('_partial/head') %>
 
+<!-- Body -->
 <body>
+  <!-- Top -->
+  <!--<%- partial('_partial/banner') %>-->
+  <%- partial('_partial/nav') %>
 
+  <!-- Columns, Center Body -->
+  <div class="columns is-gapless-mobile">
+    <div class="column is-full-mobile is-three-fifths-desktop is-offset-one-fifth-desktop">
+      <!-- Content -->
+      <%- body %>
+    </div>
+  </div>
 </body>
 </html>
