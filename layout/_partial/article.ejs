@@ -1,16 +1,17 @@
 <!-- Article Contents -->
+<section id="section-override" class="section">
 <article class="article">
-  <h1 class="is-size-3 has-text-centered">
+  <h1 class="is-size-2 has-text-centered">
     <%- post.title %>
   </h1>
   <% if (is_post() || is_home()){ %>
-  <h2 class="is-size-5 has-text-centered">
+  <h2 class="is-size-4 has-text-centered">
     <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
   </h2>
   <% } %>
-  <section class="section">
-    <%- post.content %>
-  </section>
+  <hr id="hr-override">
+  <%- post.content %>
   <%- partial('post-nav') %>
 </article>
+</section>
 
