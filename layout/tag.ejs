@@ -1,31 +1,24 @@
 <section id="section-override" class="section">
 <article class="article">
   <h1 class="is-size-2 has-text-centered">
-    <%= __('tags') %>
+    <%= __('tag') %>: <%- page.tag %>
   </h1>
   <hr id="hr-override">
-  <div class="tag-cloud font-sans">
-    <% if (site.tags.length){ %>
-      <%- tagcloud({min_font: 14, max_font: 28}) %>
-    <% } %>
-  </div>
-  <div class="section">
-    <% site.tags.sort('name').map(function(tag){ %>
+  <div id="less-top-padding" class="section">
     <div class="tag-section">
       <h1 class="is-size-4">
         <%- fa_inline('tags', {prefix: 'fas'}) %>
-        <%- tag.name %>
+        <%- page.tag %>
       </h1>
-      <% tag.posts.sort('-date').map(function(post, i){ %>
+      <% page.posts.sort('-date').map(function(post, i){ %>
         <a href="<%- url_for(post.path) %>">
           <div class="columns is-mobile is-gapless">
             <div class="column is-1 is-hidden-mobile"></div>
-            <div id="column-gap" class="column is-3">
+            <div class="column is-4">
               <h2 class="is-size-6">
                 <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, 'MMM DD, YYYY') %></time>
               </h2>
             </div>
-            <div class="column is-1"></div>
             <div class="column auto">
               <h2 class="is-size-6">
                 <%= post.title %>
@@ -35,7 +28,6 @@
         </a>
       <% }) %>
     </div>
-    <% }) %>
   </div>
 </article>
 </section>

@@ -4,3 +4,4 @@ next: Next
 post_total_count_one: There is %d post.
 post_total_count: There are %d posts.
 tags: Tags
+tag: Tag
