@@ -1,4 +1,6 @@
 archives: Archives
+categories: Categories
+category: Category
 prev: Previous
 next: Next
 post_total_count_one: There is %d post.

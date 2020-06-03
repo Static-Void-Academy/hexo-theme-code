@@ -1,0 +1,13 @@
+<section id="section-override" class="section">
+<article class="article">
+  <h1 class="is-size-2 has-text-centered">
+    <%= __('categories') %>
+  </h1>
+  <hr id="hr-override">
+  <div class="tag-cloud font-sans">
+    <% if(site.categories.length) { %>
+      <%- list_categories(site.categories) %>
+    <% } %>
+  </div>
+</article>
+</section>

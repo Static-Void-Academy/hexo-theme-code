@@ -19,7 +19,7 @@ favicon: favicon.ico
 # {Font-Awesome-Icon}: {URL}
 social:
   Graduation-Cap:
-    url: https://sva.thinkific.com
+    url: https://www.staticvoidacademy.com
     prefix: fas
   GitHub:
     url: https://github.com/Static-Void-Academy
@@ -29,9 +29,6 @@ social:
     prefix: fab
   Twitter:
     url: https://twitter.com/SV_Academy
-    prefix: fab
-  Medium:
-    url: https://medium.com/static-void-academy
     prefix: fab
 
 # Only support Disqus currently
