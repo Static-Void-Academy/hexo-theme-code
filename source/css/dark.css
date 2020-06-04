@@ -9,7 +9,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 
 td.gutter {
   border-right: 1px solid black;
-  width: 75px;
+  width: 60px;
 }
 td.gutter, td.code {
   font-size: 1.4em;
