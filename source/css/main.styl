@@ -92,3 +92,22 @@ blockquote
 .tag-section
   padding-bottom 20px
 
+// https://stackoverflow.com/questions/54506663/how-to-achieve-word-break-in-bulma-level-component-and-set-equal-width-to-the-le
+.level
+  .level-left
+    min-width 0
+    word-break break-word
+    flex-basis 50%
+
+    .level-item
+      flex-shrink 1
+      text-align left
+
+  .level-right
+    min-width 0
+    word-break break-word
+    flex-basis 50%
+
+    .level-item
+      flex-shrink 1
+      text-align right

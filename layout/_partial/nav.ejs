@@ -2,7 +2,7 @@
   <div class="navbar-brand">
     <a class="navbar-item" href="<%- url_for('/') %>">
     </a>
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItems">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItems" for="nav-toggle-state">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -12,17 +12,17 @@
   <div id="navbarItems" class="navbar-menu is-size-5">
     <div class="navbar-start">
     	<% Object.keys(theme.menu).forEach(function(key) { %>
-      <a class="navbar-item" href="<%- url_for(theme.menu[key]) %>"><%= key %></a>
+      <a class="navbar-item has-text-centered" href="<%- url_for(theme.menu[key]) %>"><%= key %></a>
       <% }); %>
     </div>
     <div class="navbar-end">
     	<% Object.keys(theme.social).forEach(function(key) { %>
-      <a class="navbar-item" href="<%- theme.social[key]['url'] %>">
+      <a class="navbar-item has-text-centered" href="<%- theme.social[key]['url'] %>">
         <% var iconName = key.toLowerCase() %>
         <%- fa_inline(iconName, {prefix: theme.social[key]['prefix']}) %>
       </a>
       <% }); %>
-      <a class="navbar-item" href="<%- theme.rss %>">
+      <a class="navbar-item has-text-centered" href="<%- theme.rss %>">
         <%- fa_inline('rss', {prefix: 'fas'}) %>
       </a>
     </div>
