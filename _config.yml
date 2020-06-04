@@ -38,3 +38,5 @@ disqus_shortname: static-void-academy
 google_site_verification:
 google_analytics: UA-159047384-1
 
+# Code Highlight theme
+highlight_theme: darker
