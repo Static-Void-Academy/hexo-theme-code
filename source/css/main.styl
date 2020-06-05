@@ -26,12 +26,20 @@ hr
   background-color color-gray
 
 section
-  img
-    width 70%
+  figure.article-image-center, figure.article-image-left
     display block
     margin-left auto
     margin-right auto
     padding 25px 0
+    width 70%
+    figcaption
+      text-align center
+  img
+    display block
+    margin-left auto
+    margin-right auto
+  img, video
+    width 100%
   article
     font-family font-serif
     h1
@@ -53,6 +61,8 @@ section
       font-size normal-size
       letter-spacing letter-spacing
       line-height line-spacing
+      code
+        font-size 0.8em
     ul,ol
       font-size normal-size
       margin-left 50px
@@ -69,7 +79,7 @@ section
       font-size 0.8em
       border-left solid color-black
       p,span
-        padding 5px 0
+        padding 10px 0
     div.tag-cloud
       ul, ol
         font-weight bold
@@ -93,12 +103,16 @@ blockquote
 
 // https://stackoverflow.com/questions/54506663/how-to-achieve-word-break-in-bulma-level-component-and-set-equal-width-to-the-le
 .level
+  display flex
   .level-left
     min-width 0
     word-break break-word
     flex-basis 50%
 
     .level-item
+      flex-direction column
+      word-break break-word
+      padding 0
       flex-shrink 1
       text-align left
 
@@ -108,5 +122,9 @@ blockquote
     flex-basis 50%
 
     .level-item
+      flex-direction column
+      word-break break-word
+      padding 0
       flex-shrink 1
       text-align right
+
