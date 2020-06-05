@@ -39,4 +39,5 @@ google_site_verification:
 google_analytics: UA-159047384-1
 
 # Code Highlight theme
+# Only theme available is darker right now
 highlight_theme: darker
