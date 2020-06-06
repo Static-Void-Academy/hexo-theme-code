@@ -1,4 +1,4 @@
-<% page.posts.each(function(post){ %>
+<% page.posts.limit(1).each(function(post){ %>
   <%- partial('_partial/article', {post: post}) %>
 <% }) %>
 
