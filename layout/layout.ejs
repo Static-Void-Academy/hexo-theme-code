@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
 <%- partial('_partial/head') %>
@@ -10,7 +11,11 @@
 
   <!-- Columns, Center Body -->
   <div class="columns is-gapless-mobile is-centered">
+  <% if (is_current('/software-roadmap')) { %>
+    <div class="column auto">
+  <% } else { %>
     <div class="column is-full-mobile is-7-desktop">
+  <% } %>
       <!-- Content -->
       <%- body %>
     </div>

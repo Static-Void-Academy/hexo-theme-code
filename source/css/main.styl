@@ -62,7 +62,7 @@ section
       letter-spacing letter-spacing
       line-height line-spacing
       code
-        font-size 0.8em
+        font-size code-size
     ul,ol
       font-size normal-size
       margin-left 50px
@@ -71,12 +71,14 @@ section
       line-height line-spacing
       li
         padding-bottom 15px
+      code
+        font-size code-size
     ul
       list-style circle
     ol
       list-style decimal
     blockquote
-      font-size 0.8em
+      font-size code-size
       border-left solid color-black
       p,span
         padding 10px 0
@@ -128,3 +130,5 @@ blockquote
       flex-shrink 1
       text-align right
 
+.mc-layout__modalContent
+  border-radius 10px
