@@ -12,7 +12,25 @@
   <div id="navbarItems" class="navbar-menu is-size-5">
     <div class="navbar-start">
     	<% Object.keys(theme.menu).forEach(function(key) { %>
-      <a class="navbar-item has-text-centered" href="<%- url_for(theme.menu[key]) %>"><%= key %></a>
+        <% if (typeof(theme.menu[key]) == 'object') { %>
+        <div class="navbar-item has-dropdown is-hoverable has-text-centered">
+          <span class="navbar-item">
+            <%= key %>
+            <i class="arrow down"></i>
+          </span>
+          <div class="navbar-dropdown">
+          <% Object.keys(theme.menu[key]).forEach(function(subkey) { %>
+            <% if (theme.menu[key][subkey] == 'disabled') { %>
+            <a class="navbar-item has-text-centered is-disabled"><%= subkey %></a>
+            <% } else { %>
+            <a class="navbar-item has-text-centered" href="<%- url_for(theme.menu[key][subkey]) %>"><%= subkey %></a>
+            <% } %>
+          <% }); %>
+          </div>
+        </div>
+        <% } else { %>
+        <a class="navbar-item has-text-centered" href="<%- url_for(theme.menu[key]) %>"><%= key %></a>
+        <% } %>
       <% }); %>
     </div>
     <div class="navbar-end">
