@@ -1,0 +1,11 @@
+<footer class="footer has-text-centered is-size-6">
+  <div>
+    <% Object.keys(theme.social).forEach(function(key) { %>
+    <a class="footer-social is-size-4" href="<%- theme.social[key]['url'] %>">
+      <% var iconName = key.toLowerCase() %>
+      <%- fa_inline(iconName, {prefix: theme.social[key]['prefix']}) %>
+    </a>
+    <% }); %>
+  </div>
+  Copyright &copy; <%= new Date().getFullYear(); %> Static Void Academy. Site built with <a href="https://hexo.io/">Hexo.io</a> and <a href="https://bulma.io/">Bulma</a>.
+</footer>
