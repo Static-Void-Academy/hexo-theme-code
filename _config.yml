@@ -8,9 +8,10 @@ menu:
     Archives: /archives
     Categories: /categories
     Tags: /tags
-  "Education Roadmap":
-    "Full Graphic": /software-roadmap
+  Resources:
+    "Education Roadmap": /software-roadmap
     "PDF Checklist": disabled
+    "Recommended Books": /recommended-books
   "Flagship Course": https://www.staticvoidacademy.com/
 rss: /atom.xml
 
@@ -46,5 +47,5 @@ google_site_verification:
 google_analytics: UA-159047384-1
 
 # Code Highlight theme
-# Only theme available is darker right now
+# Only theme available right now is darker
 highlight_theme: darker
