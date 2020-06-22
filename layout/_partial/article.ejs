@@ -9,8 +9,26 @@
     <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
   </h2>
   <% } %>
-  <hr id="hr-override">
+  <hr id="hr-top">
   <%- post.content %>
+  <% if (is_post() || is_home()){ %>
+  <hr id="hr-bottom">
+  <span class="is-size-7 font-sans">
+    <%- fa_inline('folder-open', {prefix: 'fas'}) %>
+    <%- list_categories(post.categories, {
+      show_count: false,
+      class: 'article-tag'
+    }) %>
+  </span>
+  <br>
+  <span class="is-size-7 font-sans">
+    <%- fa_inline('tags', {prefix: 'fas'}) %>
+    <%- list_tags(post.tags, {
+      show_count: false,
+      class: 'article-tag'
+    }) %>
+  </span>
+  <% } %>
   <%- partial('post-nav') %>
 </article>
 </section>

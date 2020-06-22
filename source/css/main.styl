@@ -25,6 +25,12 @@
 hr
   background-color color-gray
 
+hr#hr-top
+  margin-top 0
+hr#hr-bottom
+  margin-top 0
+  margin-bottom 10px
+
 section
   figure.article-image-center, figure.article-image-left
     display block
@@ -105,6 +111,17 @@ blockquote
 
 a.footer-social:not(:first-of-type)
   margin-left 10px
+
+ul.article-tag-list, ul.article-tag-list-child
+  height 20px
+  font-size 1rem
+  margin 0
+  padding 0 0 0 10px
+  list-style none
+  display inline-flex
+  li.article-tag-list-item
+    margin-right 10px
+    padding-bottom 0
 
 // https://stackoverflow.com/questions/54506663/how-to-achieve-word-break-in-bulma-level-component-and-set-equal-width-to-the-le
 .level

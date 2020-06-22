@@ -5,20 +5,20 @@
 menu:
   Home:
     Blog: /
-    Archives: archives
-    Categories: categories
-    Tags: tags
+    Archives: /archives
+    Categories: /categories
+    Tags: /tags
   "Education Roadmap":
-    "Full Graphic": software-roadmap
+    "Full Graphic": /software-roadmap
     "PDF Checklist": disabled
   "Flagship Course": https://www.staticvoidacademy.com/
 rss: /atom.xml
 
 # Displayed in columns in footer
 footer:
-  Resources:
-    About: about
-    Credits: credits
+  Company:
+    About: /about
+    Credits: /credits
 
 # Default Keywords
 keywords: blog, static, void, academy, program, programming, programmer, code, coding, coder, software, software engineer, develop, development, developer, python, javascript
