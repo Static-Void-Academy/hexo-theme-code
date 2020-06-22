@@ -1,11 +1,41 @@
 <footer class="footer has-text-centered is-size-6">
-  <div>
-    <% Object.keys(theme.social).forEach(function(key) { %>
-    <a class="footer-social is-size-4" href="<%- theme.social[key]['url'] %>">
-      <% var iconName = key.toLowerCase() %>
-      <%- fa_inline(iconName, {prefix: theme.social[key]['prefix']}) %>
-    </a>
-    <% }); %>
+<div class="columns is-gapless is-centered">
+<div class="column is-full-mobile is-7-desktop">
+  <div class="columns is-mobile is-multiline">
+  <% Object.keys(theme.footer).forEach(function(column) { %>
+  <div class="column auto has-text-left">
+    <h1 class="is-size-6 is-uppercase has-text-weight-bold" style="margin-bottom: 10px;"><%= column %></h1>
+    <ul>
+      <% Object.keys(theme.footer[column]).forEach(function(item) { %>
+      <li><a href="<%- theme.footer[column][item] %>"><%= item %></a></li>
+      <% }); %>
+    </ul>
   </div>
-  Copyright &copy; <%= new Date().getFullYear(); %> Static Void Academy. Site built with <a href="https://hexo.io/">Hexo.io</a> and <a href="https://bulma.io/">Bulma</a>.
+  <% }); %>
+  <div class="column is-full">
+  <div class="level">
+    <div class="level-left">
+      <div class="level-item">
+        <figure class="image">
+          <img src="/img/logo-long.png" alt="Static Void Academy" style="height: 50px; width: auto;">
+        </figure>
+      </div>
+    </div>
+    <div class="level-right">
+      <% Object.keys(theme.social).forEach(function(key) { %>
+      <a class="footer-social is-size-4" href="<%- theme.social[key]['url'] %>">
+        <% var iconName = key.toLowerCase() %>
+        <%- fa_inline(iconName, {prefix: theme.social[key]['prefix']}) %>
+      </a>
+      <% }); %>
+      <a class="footer-social is-hidden-desktop is-size-4" href="<%- theme.rss %>">
+        <%- fa_inline('rss', {prefix: 'fas'}) %>
+      </a>
+    </div>
+  </div>
+  Copyright &copy; <%= new Date().getFullYear(); %> Static Void Academy. All rights reserved.
+  </div> <!-- inner column -->
+  </div> <!-- inner columns -->
+</div> <!-- column -->
+</div> <!-- columns -->
 </footer>

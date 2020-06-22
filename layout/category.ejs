@@ -1,13 +1,13 @@
 <section id="section-override" class="section">
 <article class="article">
-  <h1 class="is-size-2 has-text-centered">
+  <h1 class="is-size-3 has-text-centered" style="padding-top: 15px;">
     <%= __('category') %>: <%- page.category %>
   </h1>
   <hr id="hr-override">
   <div id="less-top-padding" class="section">
     <div class="tag-section">
-      <h1 class="is-size-4">
-        <%- fa_inline('file', {prefix: 'fas'}) %>
+      <h1 class="is-size-5">
+        <%- fa_inline('folder-open', {prefix: 'fas'}) %>
         <%- page.category %>
       </h1>
       <% page.posts.sort('-date').map(function(post, i){ %>
