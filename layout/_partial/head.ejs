@@ -37,7 +37,11 @@
 
   <!-- Other Social Preview -->
   <meta property="og:site_name" content="<%- config.title %>" />
+  <% if (page.permalink) { %>
   <meta property="og:url" content="<%- page.permalink %>" />
+  <% } else { %>
+  <meta property="og:url" content="<%- config.url %>" />
+  <% } %>
   <meta property="og:type" content="blog" />
 
   <!-- Special img for roadmap -->
