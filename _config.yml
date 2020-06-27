@@ -11,7 +11,8 @@ menu:
   Resources:
     "Education Roadmap": /software-roadmap
     "PDF Checklist": disabled
-    "Recommended Books": /recommended-books
+    "Recommended Books to Read": /recommended-books
+    "Recommended People to Follow": /recommended-people
   "Flagship Course": https://www.staticvoidacademy.com/
 rss: /atom.xml
 
