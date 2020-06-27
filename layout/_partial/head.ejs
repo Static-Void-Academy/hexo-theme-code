@@ -4,19 +4,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <% if (config.author) { %>
   <meta name="author" content="<%- config.author %>" />
   <% }%>
+
   <% if (page.description){ %>
   <meta name="description" content="<%- page.description %>" />
   <% } else if (config.description) { %>
   <meta name="description" content="<%- config.description %>" />
   <% }%>
 
-  <% if (page.keywords){ %>
+  <% if (page.tags && page.tags.length){ %>
+  <meta name="keywords" content="<%- page.tags.map(function(tag){ return tag.name; }).join(","); %>" />
+  <% } else if (page.keywords){ %>
   <meta name="keywords" content="<%- page.keywords %>" />
-  <% } else if (page.tags && page.tags.length){ %>
-  <meta name="keywords" content="<% page.tags.forEach(function(tag, i){ %><%- tag.name %><% }) %>" />
   <% } else if (config.keywords){ %>
   <meta name="keywords" content="<%- config.keywords %>" />
   <% }%>
@@ -27,8 +29,22 @@
 
   <% if (page.title){ %>
   <title><%- page.title %></title>
+  <meta property="og:title" content="<%- page.title %>" />
   <% } else if (config.title) { %>
   <title><%- config.title %></title>
+  <meta property="og:title" content="<%- config.title %>" />
+  <% } %>
+
+  <!-- Other Social Preview -->
+  <meta property="og:site_name" content="<%- config.title %>" />
+  <meta property="og:url" content="<%- page.permalink %>" />
+  <meta property="og:type" content="blog" />
+
+  <!-- Special img for roadmap -->
+  <% if (is_current('/software-roadmap')) { %>
+  <meta property="og:image" content="/img/roadmap-preview.png" />
+  <% } else { %>
+  <meta property="og:image" content="/img/logo-square.png" />
   <% } %>
 
   <!-- FAVICON -->
