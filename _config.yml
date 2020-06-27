@@ -21,6 +21,7 @@ footer:
   Company:
     About: /about
     Credits: /credits
+    Contact: /contact
 
 # Default Keywords
 keywords: blog, static, void, academy, program, programming, programmer, code, coding, coder, software, software engineer, develop, development, developer, python, javascript
