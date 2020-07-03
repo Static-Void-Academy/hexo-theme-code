@@ -9,11 +9,13 @@ menu:
     Categories: /categories
     Tags: /tags
   Resources:
-    "Education Roadmap": /software-roadmap
+    "Recommended Books": /recommended-books
+    "People to Follow": /recommended-people
+    "Interviewing Resources": /interviewing-resources
+  "Software Roadmap":
+    "Visual Roadmap": /software-roadmap
     "PDF Checklist": disabled
-    "Recommended Books to Read": /recommended-books
-    "Recommended People to Follow": /recommended-people
-  "Flagship Course": https://www.staticvoidacademy.com/
+  "Online Academy": https://www.staticvoidacademy.com/
 rss: /atom.xml
 
 # Displayed in columns in footer
