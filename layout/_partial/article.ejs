@@ -4,10 +4,15 @@
   <h1 class="is-size-3 has-text-centered" style="padding-top: 15px;">
     <%- post.title %>
   </h1>
-  <% if (is_post() || is_home()){ %>
-  <h2 class="is-size-5 has-text-centered" style="padding-top: 0">
-    <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
+  <% if (post.subtitle){ %>
+  <h2 class="is-size-5 has-text-centered" style="padding-top: 5px;">
+    <%- post.subtitle %>
   </h2>
+  <% } %>
+  <% if ((is_post() || is_home()) && post.date){ %>
+  <h4 class="is-size-6 has-text-centered" style="padding-top: 0">
+    <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
+  </h4>
   <% } %>
   <hr id="hr-top">
   <%- post.content %>
