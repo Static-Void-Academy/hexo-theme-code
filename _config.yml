@@ -22,7 +22,7 @@ rss: /atom.xml
 
 # Displayed in columns in footer
 footer:
-  Company:
+  Organization:
     About: /about
     Credits: /credits
     Contact: /contact
