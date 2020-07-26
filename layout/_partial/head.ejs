@@ -87,7 +87,7 @@
   <%- js('js/main.js') %>
   <%- js('js/search.js') %>
   <%- js('js/fuse.min.js') %>
-  <% if (is_current('/software-roadmap')) { %>
+  <% if (is_current('/software-roadmap') || is_current('/tech-org-chart')) { %>
     <%- js('js/svg-pan-zoom.min.js') %>
   <% } %>
   <% if (is_current('/checklist')) { %>

@@ -17,6 +17,7 @@ menu:
   "Software Roadmap":
     "Visual Roadmap": /software-roadmap
     "PDF Checklist": disabled
+  "Tech Org Chart": /tech-org-chart
   "Online Academy": https://www.staticvoidacademy.com/
 rss: /atom.xml
 
